@@ -22,6 +22,5 @@ function ListUser({ userInfo, deleteUser }) {
 
         </>
     );
-    // console.log(props);
 }
 export default ListUser;

@@ -33,14 +33,19 @@ function App() {
     setTimeout(() => {
       document.title = "U did use the CDM ";
     }, 2000);
-  });
+    console.log("useEffect ")
+
+  }, []);
+  // * lưu ý: mỗi lần xài useEffect thì phải có dependency tức pải có mảng để tránh mỗi lần load web thì nó lại render lại lần nữa
+  // sẽ lm giảm hiệu năng ( kiểu gọi hàm nhiều lần mà ko lm gì hét)
   useEffect(() => {
     // Mã này sẽ chạy mỗi khi userInfo thay đổi
-    console.log(userInfo);
     if (userInfo.length === 5) {
       alert('me')
     }
   }, [userInfo]); // Thêm userInfo vào mảng phụ thuộc
+  console.log("ccc")
+
   return (
     <>
       <User addUser={addUser} />
