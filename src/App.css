@@ -4,14 +4,41 @@
   box-sizing: border-box;
 }
 
-.red {
-  color: red;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
 }
 
-.blue {
-  color: blue;
-}
+.app-container {
+  .header-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 
-.user {
-  padding: 10px;
+    .navbar-brand {
+      color: #E2BBE9;
+    }
+
+    .navbar-nav {
+      .nav-link {
+        color: #9B86BD;
+      }
+
+      .active {
+        color: #E2BBE9;
+      }
+    }
+
+    .bg-body-tertiary {
+      background-color: #5A639C !important;
+    }
+  }
+
+  .homepage-container {
+    video {
+      width: 50vw;
+    }
+  }
 }
